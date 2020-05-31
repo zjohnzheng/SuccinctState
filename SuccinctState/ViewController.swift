@@ -19,6 +19,7 @@ class ViewController: UIViewController {
     /// off = Celsius, on = Fahrenheit
     var temperatureSwitchIsOn = false
     @IBOutlet weak var temperatureSwitch: UISwitch!
+    
     @IBAction func temperatureSwitchToggled(_ sender: Any) {
         temperatureSwitchIsOn = temperatureSwitch.isOn
         if temperatureSwitchIsOn {
