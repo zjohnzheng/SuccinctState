@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,64 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SuccinctState" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MX9-FY-wXs">
+                                <rect key="frame" x="132" y="373" width="150" height="150"/>
+                                <color key="backgroundColor" red="0.81067386782394635" green="0.80751878589681514" blue="0.86263020833333337" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="c4T-KM-MEH"/>
+                                    <constraint firstAttribute="width" constant="150" id="t5C-1W-bTq"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CrQ-Si-WnI">
+                                <rect key="frame" x="174.5" y="409" width="65" height="78"/>
+                                <subviews>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iey-3h-r2c">
+                                        <rect key="frame" x="8" y="39" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="temperatureSwitchToggled:" destination="BYZ-38-t0r" eventType="valueChanged" id="wag-Lv-cF7"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32 °F" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8dW-Rt-hHe">
+                                        <rect key="frame" x="9" y="8" width="47" height="23"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="iey-3h-r2c" secondAttribute="trailing" constant="8" id="0Bz-7W-0mw"/>
+                                    <constraint firstItem="8dW-Rt-hHe" firstAttribute="top" secondItem="CrQ-Si-WnI" secondAttribute="top" constant="8" id="1Gq-Qg-od9"/>
+                                    <constraint firstItem="iey-3h-r2c" firstAttribute="leading" secondItem="CrQ-Si-WnI" secondAttribute="leading" constant="8" id="L3Z-wO-gbg"/>
+                                    <constraint firstItem="iey-3h-r2c" firstAttribute="top" secondItem="8dW-Rt-hHe" secondAttribute="bottom" constant="8" id="PQh-Xp-gVv"/>
+                                    <constraint firstAttribute="bottom" secondItem="iey-3h-r2c" secondAttribute="bottom" constant="8" id="Sc8-s1-6jb"/>
+                                    <constraint firstItem="8dW-Rt-hHe" firstAttribute="centerX" secondItem="CrQ-Si-WnI" secondAttribute="centerX" id="UFY-z7-R0r"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="MX9-FY-wXs" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ihr-CI-iht"/>
+                            <constraint firstItem="CrQ-Si-WnI" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gDh-FY-lva"/>
+                            <constraint firstItem="MX9-FY-wXs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="qyv-ir-auE"/>
+                            <constraint firstItem="CrQ-Si-WnI" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vvk-b6-8k6"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="centerView" destination="MX9-FY-wXs" id="RzE-Gc-w3t"/>
+                        <outlet property="temperatureLabel" destination="8dW-Rt-hHe" id="54D-ob-jVq"/>
+                        <outlet property="temperatureSwitch" destination="iey-3h-r2c" id="bu4-Gc-abt"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="138.61607142857142"/>
         </scene>
     </scenes>
 </document>
